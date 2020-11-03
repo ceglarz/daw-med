@@ -61,31 +61,22 @@
 <section class="main">
     <div class="inner">
 
-        <div class="row">
-            <div class="column">
-                <img src="images/1.jpg" alt="Daw-Med" onclick="showImage(this);">
-            </div>
-            <div class="column">
-                <img src="images/2.jpg" alt="Daw-Med" onclick="showImage(this);">
-            </div>
-            <div class="column">
-                <img src="images/3.jpg" alt="Daw-Med" onclick="showImage(this);">
-            </div>
-            <div class="column">
-                <img src="images/11.jpg" alt="Daw-Med" onclick="showImage(this);">
-            </div>
-        </div>
+        <img id="myImg1" class="gallery-img" src="images/office1-s.jpg" onclick="openModal(this)">
+        <img id="myImg2" class="gallery-img" src="images/office2-s.jpg" onclick="openModal(this)">
+        <img id="myImg3" class="gallery-img" src="images/office3-s.jpg" onclick="openModal(this)">
+        <img id="myImg4" class="gallery-img" src="images/office4-s.jpg" onclick="openModal(this)">
+        <img id="myImg5" class="gallery-img" src="images/office5-s.jpg" onclick="openModal(this)">
+        <img id="myImg11" class="gallery-img" src="images/office11-s.jpg" onclick="openModal(this)">
+        <img id="myImg7" class="gallery-img" src="images/office7-s.jpg" onclick="openModal(this)">
+        <img id="myImg8" class="gallery-img" src="images/office8-s.jpg" onclick="openModal(this)">
+        <img id="myImg10" class="gallery-img" src="images/office10-s.jpg" onclick="openModal(this)">
+        <img id="myImg9" class="gallery-img" src="images/office9-s.jpg" onclick="openModal(this)">
+        <img id="myImg6" class="gallery-img" src="images/office6-s.jpg" onclick="openModal(this)">
 
-        <!-- The expanding image container -->
-        <div class="container">
-            <!-- Close the image -->
-            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-
-            <!-- Expanded image -->
-            <img id="expandedImg" style="width:100%">
-
-            <!-- Image text -->
-            <div id="imgtext"></div>
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+            <div id="caption"></div>
         </div>
 
     </div>

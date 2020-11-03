@@ -1,12 +1,20 @@
-function showImage(imgs) {
-  // Get the expanded image
-  var expandImg = document.getElementById("expandedImg");
-  // Get the image text
-  var imgText = document.getElementById("imgtext");
-  // Use the same src in the expanded image as the image being clicked on from the grid
-  expandImg.src = imgs.src;
-  // Use the value of the alt attribute of the clickable image as text inside the expanded image
-  imgText.innerHTML = imgs.alt;
-  // Show the container element (hidden with CSS)
-  expandImg.parentElement.style.display = "block";
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("modal-img");
+//var captionText = document.getElementById("caption");
+
+openModal = function (element) {
+
+    var src = element.src
+    var positionStart = src.length - 6;
+    var positionStop = positionStart+2;
+    src = [src.slice(0, positionStart), src.slice(positionStop)].join('');
+    modal.style.display = "block";
+    modalImg.src = src;
+//    captionText.innerHTML = element.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function () {
+    modal.style.display = "none";
 }
